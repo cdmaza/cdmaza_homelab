@@ -4,20 +4,35 @@ By leveraging GitOps and Infrastructure as Code (IaC), this project automates th
 
 Goals: It's run and do what i want.
 
-## Outline
+## First server:
 
-`Server_1` specifications **(Lenovo Ideacenter)**:
+### LENOVO 36C5
 
-| Hardware | Details                         |
-|-----|--------------------------------------|
-| CPU | Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz |
-| RAM | 8GB |
-| HDD | 1TB |
-| GPU | No |
+| Specs  | Details |
+| ------------- |:-------------:|
+| Baseboard      | SDK0K13455     |
+| WIN      | 3273058843540     |
+| CPU      | Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz     |
+| RAM      | 8GB     |
+| Storage      | 1 TB     |
 
+[Lenovo Help Center](https://pcsupport.lenovo.com/us/en/products/desktops-and-all-in-ones/500-series/510s-08ikl/90gb/solutions/ht504725-where-to-find-the-maximum-supported-ram-information)
 
-## Project
+### Limitations
 
+1. CPU bottleneck (4 threads, no hyperthreading)
+2. Low RAM -> Need upgrade to 32GB
+
+    a. No ECC Memory - Not good for critical production
+3. Old PC - Cost electrical more
+
+**Good for homelab learning**
+
+### Features
+* Reverse proxy (NGINX)
+* Internal DNS (Pi-hole)
+* CI/CD (Jenkins / GitLab)
+* Monitoring (Prometheus + Grafana)
 
 
 ### Tech stack
